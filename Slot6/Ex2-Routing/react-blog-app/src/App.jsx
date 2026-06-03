@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import AppNavbar from './components/AppNavbar';
 import Home from './pages/Home';
 import PostList from './pages/PostList';
@@ -16,7 +16,8 @@ function App() {
 
             {/* Định nghĩa các route */}
             <Routes>
-                <Route path='/' element={<Home />} />
+                <Route path='/' element={<Navigate to="/register" replace />} />
+                <Route path='/home' element={<Home />} />
                 <Route path='/posts' element={<PostList />} />
                 <Route path='/posts/:id' element={<PostDetail />} />
                 <Route path='/about' element={<About />} />

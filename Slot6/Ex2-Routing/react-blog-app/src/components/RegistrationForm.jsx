@@ -141,14 +141,14 @@ function RegistrationForm() {
             // Giả lập đăng ký thành công
             console.log('Đăng ký thành công với dữ liệu:', formData);
             // Chuyển hướng về trang chủ blog
-            navigate('/');
+            navigate('/home');
         }
     };
 
     // Hàm xử lý nút Cancel
     const handleCancel = () => {
         // Chuyển hướng về trang chủ blog
-        navigate('/');
+        navigate('/home');
     };
 
     return (
